@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import logo from "./assets/B&M-logo.png";
 import backgroundImage from "./assets/B&M.jpg";
-import leftSideImage from "./assets/left-side-image.png";
+
 
 const App = () => {
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
