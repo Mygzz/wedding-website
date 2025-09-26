@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import logo from "./assets/B&M-logo.png";
-import backgroundImage from "./assets/B&M.jpg";
+import backgroundImage from "./assets/HomeBG.jpg";
 
 
 const App = () => {
