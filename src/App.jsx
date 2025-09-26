@@ -213,7 +213,7 @@ const App = () => {
             {/* Main Names - Mobile Optimized */}
             <div className="flex flex-col items-center justify-center mb-4 md:mb-8 px-2">
               {/* Benson */}
-              <h2 className="text-8xl sm:text-9xl md:text-9xl lg:text-8xl xl:text-9xl font-['Kapakana'] text-shadow-lg text-[#49284D] tracking-tight md:tracking-wider leading-tight">
+              <h2 className="text-8xl sm:text-9xl md:text-9xl lg:text-8xl xl:text-9xl font-['Kapakana'] text-shadow-sm text-shadow-white text-[#49284D] tracking-tight md:tracking-wider leading-tight">
                 Benson
               </h2>
 
@@ -223,7 +223,7 @@ const App = () => {
               </h2>
 
               {/* Mich Rogene */}
-              <h2 className="text-8xl sm:text-9xl md:text-9xl lg:text-8xl  xl:text-9xl font-['Kapakana'] text-shadow-lg text-[#49284D] tracking-tight md:tracking-wider leading-tight">
+              <h2 className="text-8xl sm:text-9xl md:text-9xl lg:text-8xl  xl:text-9xl font-['Kapakana'] text-shadow-sm text-shadow-white text-[#49284D] tracking-tight md:tracking-wider leading-tight">
                 Mich Rogene
               </h2>
             </div>
@@ -279,7 +279,7 @@ const App = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Photo Section */}
         <section id="photo" className="py-12 md:py-16 bg-[#F5F4F5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
