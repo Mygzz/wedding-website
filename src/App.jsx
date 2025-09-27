@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import logo from "./assets/B&M-logo.png";
 import backgroundImage from "./assets/HomeBG.jpg";
+import PhotoGallery from "./component/PhotoGallery";
 
 
 const App = () => {
@@ -51,6 +52,10 @@ const App = () => {
     setIsUserDropdownOpen(false);
     setIsMobileMenuOpen(false);
   };
+
+
+
+  
 
   return (
     <div className="bg-[#221024] min-h-screen">
@@ -256,7 +261,6 @@ const App = () => {
                 </p>
               </div>
 
-              {/* Vertical Line */}
               <div className="hidden md:flex justify-center">
                 <div className="w-px h-20 bg-[#C587CD]"></div>
               </div>
@@ -281,17 +285,7 @@ const App = () => {
         </section>
 
         {/* Photo Section */}
-        <section id="photo" className="py-12 md:py-16 bg-[#F5F4F5]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center md:text-left">
-              Photo Gallery
-            </h2>
-            <p className="text-gray-600 text-center md:text-left">
-              Cherished moments and beautiful memories from our journey
-              together.
-            </p>
-          </div>
-        </section>
+        <PhotoGallery />
 
         {/* Theme Section */}
         <section id="theme" className="py-12 md:py-16 bg-white">
