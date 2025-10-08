@@ -16,13 +16,10 @@ const PhotoGallery = () => {
 
   const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 
-  // Replace this with your Google Drive video embed URL
   const googleDriveVideoUrl =
     "https://drive.google.com/file/d/1auJfyXfyOIj2BvTDQ8SIN-h5OekfXRc-/view?usp=sharing";
-  
-  // Convert to embed URL for better playback
+
   const getEmbedUrl = (url) => {
-    // Extract video ID from Google Drive URL
     const match = url.match(/\/file\/d\/([^\/]+)/);
     if (match && match[1]) {
       return `https://drive.google.com/file/d/${match[1]}/preview`;
@@ -50,42 +47,38 @@ const PhotoGallery = () => {
     );
   };
 
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
-
   const handleVideoLoad = () => {
     setVideoLoaded(true);
   };
 
   return (
-    <section id="photo" className="py-12 md:py-16 bg-[#F5F4F5]">
+    <section id="photo" className="py-8 md:py-16 bg-[#F5F4F5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-['Playfair_Display'] font-bold text-[#49284D] text-center mb-8 md:mb-12">
+        {/* Title */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-['Playfair_Display'] font-bold text-[#49284D] text-center mb-6 md:mb-12">
           Photo & Video Gallery
         </h2>
 
         {/* Image Carousel Section */}
-        <div className="mb-16">
-          
-
+        <div className="mb-12 md:mb-16">
           {/* Carousel Container */}
           <div className="relative max-w-4xl mx-auto">
             {/* Main Image */}
-            <div className="relative h-64 md:h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative h-48 sm:h-64 md:h-96 lg:h-[500px] rounded-lg md:rounded-xl overflow-hidden shadow-lg md:shadow-2xl">
               <img
                 src={galleryImages[currentSlide]}
                 alt={`Gallery image ${currentSlide + 1}`}
                 className="w-full h-full object-cover transition-opacity duration-500"
               />
 
-              {/* Navigation Arrows */}
+              {/* Navigation Arrows - Smaller on mobile */}
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-[#49284D] rounded-full p-2 transition-all duration-200"
+                className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-[#49284D] rounded-full p-1 sm:p-2 transition-all duration-200"
+                aria-label="Previous image"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-4 h-4 sm:w-6 sm:h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -101,10 +94,11 @@ const PhotoGallery = () => {
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-[#49284D] rounded-full p-2 transition-all duration-200"
+                className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-[#49284D] rounded-full p-1 sm:p-2 transition-all duration-200"
+                aria-label="Next image"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-4 h-4 sm:w-6 sm:h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -118,31 +112,33 @@ const PhotoGallery = () => {
                 </svg>
               </button>
 
-              {/* Slide Indicators */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {/* Slide Indicators - Smaller on mobile */}
+              <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1 sm:space-x-2">
                 {galleryImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
                       index === currentSlide ? "bg-white" : "bg-white/50"
                     }`}
+                    aria-label={`Go to slide ${index + 1}`}
                   />
                 ))}
               </div>
             </div>
 
-            {/* Thumbnail Strip */}
-            <div className="flex justify-center space-x-2 mt-4 overflow-x-auto py-2">
+            {/* Thumbnail Strip - Scrollable on mobile */}
+            <div className="flex space-x-1 sm:space-x-2 mt-3 sm:mt-4 overflow-x-auto py-2 px-2 sm:px-0">
               {galleryImages.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                  className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-md sm:rounded-lg overflow-hidden border-2 transition-all duration-200 ${
                     index === currentSlide
-                      ? "border-[#C587CD]"
-                      : "border-transparent"
+                      ? "border-[#C587CD] scale-105"
+                      : "border-transparent opacity-70 hover:opacity-100"
                   }`}
+                  aria-label={`View image ${index + 1}`}
                 >
                   <img
                     src={image}
@@ -157,11 +153,9 @@ const PhotoGallery = () => {
 
         {/* Video Section */}
         <div className="max-w-4xl mx-auto">
-          
-
-          <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black">
+          <div className="relative rounded-lg md:rounded-xl overflow-hidden shadow-lg md:shadow-2xl bg-black">
             {/* Google Drive Video Embed */}
-            <div className="relative w-full h-64 md:h-96 lg:h-[500px]">
+            <div className="relative w-full h-48 sm:h-64 md:h-96 lg:h-[500px]">
               <iframe
                 src={embedUrl}
                 className="w-full h-full"
@@ -171,19 +165,24 @@ const PhotoGallery = () => {
                 onLoad={handleVideoLoad}
                 title="Our Love Story Video"
               />
-              
+
               {/* Loading State */}
               {!videoLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                  <div className="text-[#49284D] text-lg">Loading video...</div>
+                  <div className="text-[#49284D] text-sm sm:text-lg">
+                    Loading video...
+                  </div>
                 </div>
               )}
             </div>
           </div>
-          
-          {/* Instructions for users */}
-          <div className="text-center mt-4 text-sm text-gray-600">
-            <p>Click the fullscreen icon in the video player for the best viewing experience</p>
+
+          {/* Instructions for users - Smaller text on mobile */}
+          <div className="text-center mt-3 sm:mt-4 px-2">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Click the fullscreen icon in the video player for the best viewing
+              experience
+            </p>
           </div>
         </div>
       </div>
