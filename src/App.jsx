@@ -383,38 +383,158 @@ const App = () => {
 
       <main>
         {/* Home Section */}
+        {/* Home Section */}
         <section
           id="home"
-          className="relative h-screen bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
+          className="relative h-screen bg-gradient-to-br from-[#F5F4F5] via-[#E6E6FA] to-[#F0E8F1] overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent from-45% to-white animate-pulse-slow"></div>
+          {/* Decorative SVG Background */}
+          <svg
+            className="absolute inset-0 w-full h-full opacity-10"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="floral-pattern"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="50" cy="50" r="2" fill="#C587CD" opacity="0.3" />
+                <path
+                  d="M50,30 Q60,40 50,50 Q40,40 50,30"
+                  fill="none"
+                  stroke="#C587CD"
+                  strokeWidth="0.5"
+                />
+                <path
+                  d="M50,50 Q60,60 50,70 Q40,60 50,50"
+                  fill="none"
+                  stroke="#C587CD"
+                  strokeWidth="0.5"
+                />
+                <path
+                  d="M30,50 Q40,60 50,50 Q40,40 30,50"
+                  fill="none"
+                  stroke="#C587CD"
+                  strokeWidth="0.5"
+                />
+                <path
+                  d="M50,50 Q60,40 70,50 Q60,60 50,50"
+                  fill="none"
+                  stroke="#C587CD"
+                  strokeWidth="0.5"
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#floral-pattern)" />
+          </svg>
+
+          {/* Decorative Corner Flourishes */}
+          <svg
+            className="absolute top-0 left-0 w-48 h-48 md:w-64 md:h-64 opacity-20 animate-fade-in"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0,0 Q50,50 0,100 L0,0 M0,0 Q50,50 100,0 L0,0"
+              fill="#C587CD"
+            />
+            <circle cx="40" cy="40" r="3" fill="#49284D" />
+            <circle cx="60" cy="60" r="2" fill="#49284D" />
+          </svg>
+
+          <svg
+            className="absolute bottom-0 right-0 w-48 h-48 md:w-64 md:h-64 opacity-20 animate-fade-in"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M200,200 Q150,150 200,100 L200,200 M200,200 Q150,150 100,200 L200,200"
+              fill="#C587CD"
+            />
+            <circle cx="160" cy="160" r="3" fill="#49284D" />
+            <circle cx="140" cy="140" r="2" fill="#49284D" />
+          </svg>
+
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+            {/* Top Decorative Element */}
+            <svg
+              className="w-32 h-8 mb-6 animate-fade-in-down"
+              viewBox="0 0 150 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0,15 Q37.5,0 75,15 Q112.5,30 150,15"
+                stroke="#C587CD"
+                strokeWidth="1"
+                fill="none"
+              />
+              <circle cx="75" cy="15" r="3" fill="#49284D" />
+              <circle cx="40" cy="10" r="2" fill="#C587CD" />
+              <circle cx="110" cy="10" r="2" fill="#C587CD" />
+            </svg>
+
             <div className="mb-4 md:mb-8 w-full max-w-md animate-fade-in-down">
-              <p className="text-sm md:text-lg lg:text-xl text-white font-['Poppins'] drop-shadow-lg tracking-widest leading-relaxed [text-shadow:_0_0_8px_white,_0_0_16px_white]">
+              <p className="text-sm md:text-lg lg:text-xl text-[#49284D] font-['Poppins'] tracking-widest leading-relaxed">
                 With hearts entwined and families united
               </p>
             </div>
 
             <div className="flex flex-col items-center justify-center mb-4 md:mb-8 px-2">
-              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in-up animation-delay-300  transition-transform duration-500 cursor-default">
+              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight animate-fade-in-up animation-delay-300 transition-transform duration-500 cursor-default hover:scale-105">
                 Benson
               </h2>
 
-              <h2 className="text-6xl sm:text-7xl md:text-8xl font-['Imperial_Script'] italic text-[#49284D] my-1 md:my-2 [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in animation-delay-600  transition-transform duration-500 cursor-default">
-                &
-              </h2>
+              {/* Heart SVG Divider */}
+              <svg
+                className="w-16 h-16 my-2 md:my-4 animate-fade-in animation-delay-600"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M50,85 C50,85 20,60 20,40 C20,25 30,20 40,25 C45,27.5 50,35 50,35 C50,35 55,27.5 60,25 C70,20 80,25 80,40 C80,60 50,85 50,85 Z"
+                  fill="#C587CD"
+                  opacity="0.6"
+                />
+                <circle cx="35" cy="35" r="3" fill="#49284D" opacity="0.4" />
+                <circle cx="65" cy="35" r="3" fill="#49284D" opacity="0.4" />
+              </svg>
 
-              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in-up animation-delay-900  transition-transform duration-500 cursor-default">
+              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight animate-fade-in-up animation-delay-900 transition-transform duration-500 cursor-default hover:scale-105">
                 Mich Rogene
               </h2>
             </div>
 
             <div className="mt-4 md:mt-8 w-full max-w-md animate-fade-in-up animation-delay-1200">
-              <p className="text-sm md:text-lg lg:text-xl text-white font-['Poppins'] drop-shadow-lg tracking-widest leading-relaxed [text-shadow:_0_0_8px_white,_0_0_16px_white]">
+              <p className="text-sm md:text-lg lg:text-xl text-[#49284D] font-['Poppins'] tracking-widest leading-relaxed">
                 Graciously invite you to share in the joy of their wedding day
               </p>
             </div>
+
+            {/* Bottom Decorative Element */}
+            <svg
+              className="w-32 h-8 mt-6 animate-fade-in-up animation-delay-1200"
+              viewBox="0 0 150 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0,15 Q37.5,30 75,15 Q112.5,0 150,15"
+                stroke="#C587CD"
+                strokeWidth="1"
+                fill="none"
+              />
+              <circle cx="75" cy="15" r="3" fill="#49284D" />
+              <circle cx="40" cy="20" r="2" fill="#C587CD" />
+              <circle cx="110" cy="20" r="2" fill="#C587CD" />
+            </svg>
           </div>
         </section>
 
