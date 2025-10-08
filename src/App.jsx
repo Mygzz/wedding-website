@@ -1140,11 +1140,15 @@ const App = () => {
               <h3 className="text-2xl md:text-3xl font-['Playfair_Display'] font-bold text-[#49284D] mb-4">
                 HELP US CAPTURE THE LOVE AFTER
               </h3>
-              <p className="font-['Poppins'] justify-center text-gray-700 leading-relaxed max-w-md mb-6">
+              <p className="font-['Poppins'] justify-center text-gray-700 leading-relaxed max-w-md mb-4">
                 We are deeply grateful for your presence in our lives and on
                 this special day. Your love and support mean the world to us as
                 we embark on this beautiful journey together.
               </p>
+
+              <h3 className="text-xl md:text-2xl font-['Playfair_Display'] font-bold text-[#49284D] mb-6">
+                #alifetimeadBENtureswithMICH
+              </h3>
               <div className="flex flex-row justify-center space-x-6 mt-2">
                 <img
                   src={facebookIcon}
