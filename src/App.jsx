@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import logo from "./assets/B&M-logo.png";
-import backgroundImage from "./assets/homebg.jpg";
+import backgroundImage from "./assets/HomeBG.webp";
 import PhotoGallery from "./assets/components/PhotoGallery";
 import themeBG from "./assets/themebg.jpg";
 import wazeQR from "./assets/qrChruchW.png";
