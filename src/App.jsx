@@ -383,7 +383,6 @@ const App = () => {
 
       <main>
         {/* Home Section */}
-        {/* Home Section */}
         <section
           id="home"
           className="relative h-screen bg-gradient-to-br from-[#F5F4F5] via-[#E6E6FA] to-[#F0E8F1] overflow-hidden"
@@ -491,21 +490,9 @@ const App = () => {
                 Benson
               </h2>
 
-              {/* Heart SVG Divider */}
-              <svg
-                className="w-16 h-16 my-2 md:my-4 animate-fade-in animation-delay-600"
-                viewBox="0 0 100 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M50,85 C50,85 20,60 20,40 C20,25 30,20 40,25 C45,27.5 50,35 50,35 C50,35 55,27.5 60,25 C70,20 80,25 80,40 C80,60 50,85 50,85 Z"
-                  fill="#C587CD"
-                  opacity="0.6"
-                />
-                <circle cx="35" cy="35" r="3" fill="#49284D" opacity="0.4" />
-                <circle cx="65" cy="35" r="3" fill="#49284D" opacity="0.4" />
-              </svg>
+              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight animate-fade-in-up animation-delay-600 transition-transform duration-500 cursor-default hover:scale-105">
+                &
+              </h2>
 
               <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight animate-fade-in-up animation-delay-900 transition-transform duration-500 cursor-default hover:scale-105">
                 Mich Rogene
