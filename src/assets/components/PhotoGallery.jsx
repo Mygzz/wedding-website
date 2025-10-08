@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import img1 from "../courselPicture/1.jpg";
-import img2 from "../courselPicture/2.jpg";
-
-import img4 from "../courselPicture/4.jpg";
-import img5 from "../courselPicture/5.jpg";
-import img6 from "../courselPicture/6.jpg";
-import img7 from "../courselPicture/7.jpg";
-import img8 from "../courselPicture/8.jpg";
+import img1 from "../finalPic/1.jpg";
+import img2 from "../finalPic/2.jpg";
+import img3 from "../finalPic/3.jpg";
+import img4 from "../finalPic/4.jpg";
+import img5 from "../finalPic/5.jpg";
+import img6 from "../finalPic/6.jpg";
+import img7 from "../finalPic/7.jpg";
+import img8 from "../finalPic/8.jpg";
 
 const PhotoGallery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +14,7 @@ const PhotoGallery = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
 
-  const galleryImages = [img1, img2, img4, img5, img6, img7, img8];
+  const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 
   // Replace this with your Google Drive video embed URL
   const googleDriveVideoUrl =

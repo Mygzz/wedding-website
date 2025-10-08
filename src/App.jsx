@@ -397,15 +397,15 @@ const App = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center mb-4 md:mb-8 px-2">
-              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in-up animation-delay-300 hover:scale-105 transition-transform duration-500 cursor-default">
+              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in-up animation-delay-300  transition-transform duration-500 cursor-default">
                 Benson
               </h2>
 
-              <h2 className="text-6xl sm:text-7xl md:text-8xl font-['Imperial_Script'] italic text-[#49284D] my-1 md:my-2 [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in animation-delay-600 hover:rotate-12 transition-transform duration-500 cursor-default">
+              <h2 className="text-6xl sm:text-7xl md:text-8xl font-['Imperial_Script'] italic text-[#49284D] my-1 md:my-2 [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in animation-delay-600  transition-transform duration-500 cursor-default">
                 &
               </h2>
 
-              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in-up animation-delay-900 hover:scale-105 transition-transform duration-500 cursor-default">
+              <h2 className="text-7xl sm:text-8xl md:text-9xl font-['Imperial_Script'] italic text-[#49284D] tracking-tight md:tracking-wider leading-tight [text-shadow:_0_0_15px_white,_0_0_30px_white,_0_0_45px_white] animate-fade-in-up animation-delay-900  transition-transform duration-500 cursor-default">
                 Mich Rogene
               </h2>
             </div>
