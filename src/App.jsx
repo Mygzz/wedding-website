@@ -630,7 +630,7 @@ const App = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in-left">
                 <h3 className="text-xl md:text-2xl font-['Playfair_Display'] font-bold text-[#49284D] mb-6 text-center">
-                  SEMI FORMAL ATTIRE
+                  FORMAL ATTIRE
                 </h3>
 
                 <div className="space-y-6">
